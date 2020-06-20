@@ -1,6 +1,7 @@
 package cursojava.executavel;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import javax.swing.JOptionPane;
@@ -9,11 +10,16 @@ import cursojava.classes.Aluno;
 import cursojava.classes.Disciplina;
 import cursojava.constantes.StatusAluno;
 
+/*Comentários!!!*/
+/* HashMap carregar dados e recuperar através de um valor */
+
 public class PrimeiraClasseJava {
 
 	public static void main(String[] args) {
 
 		List<Aluno> alunos = new ArrayList<Aluno>();
+				
+		
 		List<Aluno> alunosAprovados = new ArrayList<Aluno>();
 		List<Aluno> alunosRecuperacao = new ArrayList<Aluno>();
 		List<Aluno> alunosReprovados = new ArrayList<Aluno>();
