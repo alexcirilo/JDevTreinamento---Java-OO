@@ -19,6 +19,7 @@ public class PrimeiraClasseJava {
 
 		List<Aluno> alunos = new ArrayList<Aluno>();
 				
+		HashMap<String , List<Aluno>> maps = new HashMap<>();
 		
 		List<Aluno> alunosAprovados = new ArrayList<Aluno>();
 		List<Aluno> alunosRecuperacao = new ArrayList<Aluno>();
