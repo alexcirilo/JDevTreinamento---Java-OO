@@ -6,24 +6,18 @@ import java.util.List;
 import cursojava.constantes.StatusAluno;
 
 /* Classe/Objeto representando o Aluno*/
-public class Aluno {
-	private String nome;
-	private int idade;
-	private String dataNascimento;
-	private String CPF;
-	private String nomeMae;
-	private String nomePai;
+public class Aluno extends Pessoa {
+	
 	private String dataMatricula;
 	private String nomeEscola;
 	private String serieMatriculado;
 
 	private List<Disciplina> disciplinas  = new ArrayList<Disciplina>();
 	
-
-
 	public List<Disciplina> getDisciplinas() {
 		return disciplinas;
 	}
+	
 
 	public void setDisciplinas(List<Disciplina> disciplinas) {
 		this.disciplinas = disciplinas;
@@ -126,17 +120,12 @@ public class Aluno {
 	}
 	
 	
-	
-
 	@Override
 	public String toString() {
-		return "Aluno [nome=" + nome + ", idade=" + idade
-			+ ", dataNascimento=" + dataNascimento + ", CPF="
-			+ CPF + ", nomeMae=" + nomeMae + ", nomePai="
-			+ nomePai + ", dataMatricula=" + dataMatricula
-			+ ", nomeEscola=" + nomeEscola
-			+ ", serieMatriculado=" + serieMatriculado
-			+"]";
+		return "Aluno [dataMatricula=" + dataMatricula + ", nomeEscola=" + nomeEscola + ", serieMatriculado="
+				+ serieMatriculado + ", disciplinas=" + disciplinas + ", nome=" + nome + ", idade=" + idade
+				+ ", dataNascimento=" + dataNascimento + ", RG=" + RG + ", CPF=" + CPF + ", nomeMae=" + nomeMae
+				+ ", nomePai=" + nomePai + "]";
 	}
 
 	@Override
@@ -171,5 +160,22 @@ public class Aluno {
 			return false;
 		return true;
 	}
+	
+	@Override/*Identifica método sobrescrito*/
+	public boolean pessoaMaiorIdade() {
+		
+		return idade >=21;
+	}
+	
+	public String  mensagemMaiorIdade(){
+		
+		return this.pessoaMaiorIdade() ? "Maior de idade":"Menor de idade";
+	}
 
+
+	@Override
+	public double salario() {
+		
+		return 1145.76;
+	}
 }

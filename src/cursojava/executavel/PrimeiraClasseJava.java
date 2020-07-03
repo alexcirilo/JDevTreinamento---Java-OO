@@ -8,6 +8,7 @@ import javax.swing.JOptionPane;
 
 import cursojava.classes.Aluno;
 import cursojava.classes.Disciplina;
+import cursojava.classes.Secretario;
 import cursojava.constantes.StatusAluno;
 
 /*Comentários!!!*/
@@ -19,8 +20,13 @@ public class PrimeiraClasseJava {
 
 		String login = JOptionPane.showInputDialog("Informe o Login: ");
 		String senha = JOptionPane.showInputDialog("Informe a Senha: ");
-
-		if (login.equalsIgnoreCase("admin") && senha.equals("admin")) {
+		
+		Secretario secretario = new Secretario();
+		
+		secretario.setUsuario(login);
+		secretario.setSenha(senha);
+		
+		if (secretario.autenticar()) {
 
 			List<Aluno> alunos = new ArrayList<Aluno>();
 			/* é uma lista que dentro dela temos uma chave que identifica uma sequencia de valores também */
