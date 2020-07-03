@@ -7,26 +7,22 @@ import java.util.List;
 import javax.swing.JOptionPane;
 
 import cursojava.classes.Aluno;
+import cursojava.classes.Diretor;
 import cursojava.classes.Disciplina;
-import cursojava.classes.Secretario;
+import cursojava.classesauxiliares.FuncaoAutenticacao;
 import cursojava.constantes.StatusAluno;
 
 /*Comentários!!!*/
 /* HashMap carregar dados e recuperar através de um valor */
 
 public class PrimeiraClasseJava {
-
 	public static void main(String[] args) {
 
 		String login = JOptionPane.showInputDialog("Informe o Login: ");
 		String senha = JOptionPane.showInputDialog("Informe a Senha: ");
-		
-		Secretario secretario = new Secretario();
-		
-		secretario.setUsuario(login);
-		secretario.setSenha(senha);
-		
-		if (secretario.autenticar()) {
+				
+
+		if (new FuncaoAutenticacao(new Diretor(login,senha)).autenticar()) { /*Irá bloquear o contrato para autorizar somente quem realmente tem o contrato 100% legítimo*/
 
 			List<Aluno> alunos = new ArrayList<Aluno>();
 			/* é uma lista que dentro dela temos uma chave que identifica uma sequencia de valores também */

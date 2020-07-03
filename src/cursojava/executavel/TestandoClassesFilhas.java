@@ -41,7 +41,7 @@ public class TestandoClassesFilhas {
 		teste(diretor);
 		teste(secretario);
 		
-		secretario.autenticar();
+		
 	}
 	
 	public static void teste(Pessoa pessoa) {
