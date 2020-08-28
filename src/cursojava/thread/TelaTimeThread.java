@@ -16,7 +16,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-public class AulaThread extends JDialog {
+public class TelaTimeThread extends JDialog {
 
 	private JPanel jPanel = new JPanel(new GridBagLayout()); // Painel de componentes
 	
@@ -72,7 +72,7 @@ private Runnable thread2 = new Runnable() {
 	private Thread thread2Time; 
 	
 	
-	 public AulaThread() {
+	public TelaTimeThread() {
 		setTitle("Minha Tela de Time com Thread");
 		setSize(new Dimension(330, 230));
 		setLocationRelativeTo(null);
