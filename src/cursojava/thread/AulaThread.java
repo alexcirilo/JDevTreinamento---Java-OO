@@ -18,7 +18,7 @@ import javax.swing.JTextField;
 
 public class AulaThread extends JDialog {
 
-	private JPanel jPanel = new JPanel(new GridBagLayout()); // Painel de componentes
+	private JPanel jPanel = new JPanel(new GridBagLayout()); /* Painel de componentes*/
 	
 	private JLabel descricaoHora = new JLabel("Time Thread 1");
 	private JTextField mostraHora = new JTextField();
